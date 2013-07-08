@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head><title>Rate</title>
+</head>
+<body>
+
+<h1>Rate {{film}}</h1>
+
+{% if message %}
+<div style="background:#9cf;color:#036;">{{message}}</div>
+{% endif %}
+
+<form name="rating_form" action="/rate/{{film}}" method="post">
+
+    Your first name: <input type="text" name="user">
+    <br />
+    <select name="rating">
+        <option value="1">1 star (hated it)</option>
+        <option value="2">2 stars (didn't like it)</option>
+        <option value="3">3 stars (liked it)</option>
+        <option value="4">4 stars (loved it)</option>
+    </select>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
